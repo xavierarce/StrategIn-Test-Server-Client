@@ -1,0 +1,28 @@
+###
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InhhdmllcjIzIiwiZW1haWwiOiJ4YXZpZXIyM0BnbWFpbC5jb20iLCJpYXQiOjE3MDQ0MTExNjB9.rCcmRX0Td_4L1oM3PtWEm6ub4yJte5P98oiik7jnNE8
+
+
+
+
+###
+POST  http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email":"xavier23@gmail.com",
+  "password":"Xavier12"
+}
+
+
+
+###
+POST  http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username":"xavier23",
+  "email":"xavier23@gmail.com",
+  "password":"Xavier12"
+
+}

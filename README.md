@@ -216,9 +216,7 @@ registerRouter.post("/", registerController.registerUser);
 
 ```
 
-### usersRouter
-
-.js
+### usersRouter.js
 
 ```jsx
 // Route permettant à un utilisateur authentifié d'obtenir la liste des utilisateurs.

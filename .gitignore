@@ -1,5 +1,6 @@
 # Node.js
 node_modules/
 
-# Environment variables
-.env
+# Environment variables 
+# Pour plus de facilité, j'ai joint le fichier .env au dépôt GitHub. Cependant, pour des raisons de sécurité, il ne devrait jamais être exposé.
+# .env

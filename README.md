@@ -1,4 +1,4 @@
-
+Pour plus de facilité, j'ai joint le fichier .env au dépôt GitHub. Cependant, pour des raisons de sécurité, il ne devrait jamais être exposé.
 # Test technique - API sécurisée par Enregistrement/Connexion
 
 ## Introduction
@@ -42,6 +42,8 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 2. Exécutez `npm install`.
 3. Ajoutez le fichier avec les variables d'environnement envoyé par email à la root du repo.
 4. Exécutez `npm start` pour démarrer le serveur avec nodemon.
+"Consultez request.rest pour des exemples de requêtes (installez l'extension REST Client) ou utilisez Postman."
+
 
 ## Structure du projet
 

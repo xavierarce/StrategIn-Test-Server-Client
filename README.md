@@ -13,7 +13,6 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 
 - [Test technique - API sécurisée par Enregistrement/Connexion](#test-technique---api-sécurisée-par-enregistrementconnexion)
   - [Introduction](#introduction)
-    - [Exemple de requête et d'utilisation dans Endpoints](#exemple-de-requête-et-dutilisation-dans-endpoints)
   - [Table des matières](#table-des-matières)
   - [Installation](#installation)
   - [Structure du projet](#structure-du-projet)

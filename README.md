@@ -6,31 +6,34 @@
 Bienvenue dans la documentation de l'API ! Cette application se compose de 3 étapes :
 
 1. Permet à l'utilisateur de créer un compte et de le sauvegarder dans MongoDB.
-2. Permet à l'utilisateur de se connecter et de recevoir un jeton.
-3. Permet à l'utilisateur de récupérer la liste des utilisateurs dans la base de données une fois connecté avec son jeton.
+2. Permet à l'utilisateur de se connecter et de recevoir un token.
+3. Permet à l'utilisateur de récupérer la liste des utilisateurs dans la base de données une fois connecté avec son token.
 
 ## Table des matières
 
-- [Installation](#installation)
-- [Structure du projet](#structure-du-projet)
-- [Utilisation](#utilisation)
-- [Fonctionnalités](#fonctionnalités)
-- [Endpoints](#endpoints) #Exemple de requête et utilisation
-- [Contrôleurs](#contrôleurs)
-  - [loginController.js](#logincontrollerjs)
-  - [registerController.js](#registercontrollerjs)
-  - [userController.js](#usercontrollerjs)
-- [Middlewares](#middlewares)
-  - [validationFunctions.js](#validationfunctionsjs)
-  - [authMiddleware.js](#authmiddlewarejs)
-- [Modèles](#modèles)
-  - [User.model.js](#usermodeljs)
-- [Routes](#routes)
-  - [loginRouter.js](#loginrouterjs)
-  - [registerRouter.js](#registerrouterjs)
-  - [usersRouter.js](#usersrouterjs)
-- [Services](#services)
-  - [mongo.js](#mongojs)
+- [Test technique - API sécurisée par Enregistrement/Connexion](#test-technique---api-sécurisée-par-enregistrementconnexion)
+  - [Introduction](#introduction)
+  - [Table des matières](#table-des-matières)
+  - [Installation](#installation)
+  - [Structure du projet](#structure-du-projet)
+  - [Utilisation](#utilisation)
+  - [Fonctionnalités](#fonctionnalités)
+  - [Endpoints](#endpoints)
+  - [Contrôleurs](#contrôleurs)
+    - [loginController.js](#logincontrollerjs)
+    - [registerController.js](#registercontrollerjs)
+    - [userController.js](#usercontrollerjs)
+  - [Middlewares](#middlewares)
+    - [validationFunctions.js](#validationfunctionsjs)
+    - [authMiddleware.js](#authmiddlewarejs)
+  - [Modèles](#modèles)
+    - [User.model.js](#usermodeljs)
+  - [Routes](#routes)
+    - [loginRouter.js](#loginrouterjs)
+    - [registerRouter.js](#registerrouterjs)
+    - [usersRouter.js](#usersrouterjs)
+  - [Services](#services)
+    - [mongo.js](#mongojs)
 
 ## Installation
 
@@ -73,8 +76,8 @@ StrategIn-Technical-Test Repo -  Xavier Arce
 ## Fonctionnalités
 
 - Enregistrement d'un utilisateur avec validation de l'adresse électronique, du nom d'utilisateur et du mot de passe.
-- Connexion d'un utilisateur avec génération d'un jeton d'authentification.
-- Accès à la liste des utilisateurs enregistrés pour un utilisateur authentifié avec un jeton.
+- Connexion d'un utilisateur avec génération d'un token d'authentification.
+- Accès à la liste des utilisateurs enregistrés pour un utilisateur authentifié avec un token.
 
 ## Endpoints
 
@@ -116,7 +119,7 @@ StrategIn-Technical-Test Repo -  Xavier Arce
     - Contrôleur : [userController.getUsers](notion://www.notion.so/src/Controllers/userController.js)
     - Autorisation : Porteur `<ACCESS_TOKEN>`
 
-        **Mention :** Pour que la route /users fonctionne, vous devez envoyer le jeton JWT, reçu en /login, dans l'en-tête de la requête. Utilisez le jeton obtenu en réponse à la connexion. Exemple :
+        **Mention :** Pour que la route /users fonctionne, vous devez envoyer le token JWT, reçu en /login, dans l'en-tête de la requête. Utilisez le token obtenu en réponse à la connexion. Exemple :
 
         ```http
         # Exemple de requête
@@ -133,7 +136,7 @@ StrategIn-Technical-Test Repo -  Xavier Arce
 
 ```jsx
 // Gère la connexion d'un utilisateur.
-// Renvoie un message de succès et un jeton d'authentification en cas de réussite.
+// Renvoie un message de succès et un token d'authentification en cas de réussite.
 loginRouter.post("/", loginController.loginUser);
 
 ```
@@ -175,9 +178,9 @@ module.exports = {
 ### authMiddleware.js
 
 ```jsx
-// Middleware pour vérifier le jeton d'authentification.
-// Renvoie une erreur 401 en cas d'absence de jeton.
-// Renvoie une erreur 403 en cas d'échec de la vérification du jeton.
+// Middleware pour vérifier le token d'authentification.
+// Renvoie une erreur 401 en cas d'absence de token.
+// Renvoie une erreur 403 en cas d'échec de la vérification du token.
 module.exports = authenticateToken;
 
 ```
@@ -201,7 +204,7 @@ module.exports = mongoose.model("user", UsersSchema);
 // Route permettant la connexion d'un utilisateur.
 // Renvoie un message de succès et
 
- un jeton d'authentification en cas de réussite.
+ un token d'authentification en cas de réussite.
 loginRouter.post("/", loginController.loginUser);
 
 ```

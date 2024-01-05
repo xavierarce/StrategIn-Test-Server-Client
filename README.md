@@ -45,6 +45,8 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 "Consultez request.rest pour des exemples de requêtes (installez l'extension REST Client) ou utilisez Postman."
 
 
+"Consultez request.rest pour des exemples de requêtes (installez l'extension REST Client) ou utilisez Postman."
+
 ## Structure du projet
 
 

@@ -1,4 +1,4 @@
-```markdown
+
 # Test technique - API sécurisée par Enregistrement/Connexion
 
 ## Introduction
@@ -41,7 +41,7 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 
 ## Structure du projet
 
-```
+
 StrategIn-Technical-Test Repo -  Xavier Arce
 
 1. src
@@ -66,7 +66,7 @@ StrategIn-Technical-Test Repo -  Xavier Arce
 3. package.json
 4. request.rest
 
-```
+
 
 ## Utilisation
 

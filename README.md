@@ -8,11 +8,12 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 1. Permet à l'utilisateur de créer un compte et de le sauvegarder dans MongoDB.
 2. Permet à l'utilisateur de se connecter et de recevoir un token.
 3. Permet à l'utilisateur de récupérer la liste des utilisateurs dans la base de données une fois connecté avec son token.
-
+### Exemple de requête et d'utilisation dans [Endpoints](#endpoints)
 ## Table des matières
 
 - [Test technique - API sécurisée par Enregistrement/Connexion](#test-technique---api-sécurisée-par-enregistrementconnexion)
   - [Introduction](#introduction)
+    - [Exemple de requête et d'utilisation dans Endpoints](#exemple-de-requête-et-dutilisation-dans-endpoints)
   - [Table des matières](#table-des-matières)
   - [Installation](#installation)
   - [Structure du projet](#structure-du-projet)
@@ -39,7 +40,7 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 
 1. Clonez le projet.
 2. Exécutez `npm install`.
-3. Ajoutez le fichier avec les variables d'environnement envoyé par courriel à la racine du référentiel.
+3. Ajoutez le fichier avec les variables d'environnement envoyé par email à la root du repo.
 4. Exécutez `npm start` pour démarrer le serveur avec nodemon.
 
 ## Structure du projet

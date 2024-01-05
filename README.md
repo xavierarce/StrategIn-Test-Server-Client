@@ -1,8 +1,8 @@
-# Strateg.in - Test technique - API sécurisée par Register/Login
+# Test technique - API sécurisée par Register/Login
 
 ## Introduction
 
-Bienvenue dans la documentation de l'API sécurisée de Strateg.in, développée dans le cadre d'un test technique. Cette application permet aux utilisateurs de s'inscrire, de se connecter et d'accéder à la liste des utilisateurs enregistrés.
+Bienvenue dans la documentation de l'API. Cette application permet aux utilisateurs de s'inscrire, de se connecter et d'accéder à la liste des utilisateurs enregistrés.
 
 ## Table des matières
 
@@ -22,7 +22,7 @@ Bienvenue dans la documentation de l'API sécurisée de Strateg.in, développée
 
 1. Clonez le projet.
 2. Exécutez `npm install`.
-3. Ajoutez un fichier dotenv avec les variables d'environnement.
+3. Ajoutez le fichier contenant les variables d'environnement envoyé par email.
 4. Exécutez `npm start` pour lancer le serveur avec nodemon.
 
 ## Usage
@@ -38,7 +38,9 @@ L'API offre trois routes principales:
 ## Structure du projet
 
 ```
-1. TechnicaltestRepo
+StrategIn-Technical-Test Repo -  Xavier Arce 
+
+1. src
     1. Controllers
         1. loginController.js
         2. registerController.js

@@ -119,6 +119,7 @@ StrategIn-Technical-Test Repo -  Xavier Arce
         **Mention :** Pour que la route /users fonctionne, vous devez envoyer le jeton JWT, reçu en /login, dans l'en-tête de la requête. Utilisez le jeton obtenu en réponse à la connexion. Exemple :
 
         ```http
+        # Exemple de requête
         GET http://localhost:3000/users
         Authorization: Bearer <ACCESS_TOKEN>
 

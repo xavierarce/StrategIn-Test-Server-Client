@@ -15,7 +15,7 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 - [Structure du projet](#structure-du-projet)
 - [Utilisation](#utilisation)
 - [Fonctionnalités](#fonctionnalités)
-- [Endpoints](#endpoints)
+- [Endpoints](#endpoints) #Exemple de requête
 - [Contrôleurs](#contrôleurs)
   - [loginController.js](#logincontrollerjs)
   - [registerController.js](#registercontrollerjs)

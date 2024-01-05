@@ -6,17 +6,28 @@ Bienvenue dans la documentation de l'API. Cette application permet aux utilisate
 
 ## Table des matières
 
-1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Structure du projet](#structure-du-projet)
-5. [Fonctionnalités](#fonctionnalités)
-6. [Endpoints](#endpoints)
-7. [Controllers](#controllers)
-8. [Middlewares](#middlewares)
-9. [Models](#models)
-10. [Routes](#routes)
-11. [Services](#services)
+- [Test technique - API sécurisée par Register/Login](#test-technique---api-sécurisée-par-registerlogin)
+  - [Introduction](#introduction)
+  - [Table des matières](#table-des-matières)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Structure du projet](#structure-du-projet)
+  - [Fonctionnalités](#fonctionnalités)
+  - [Endpoints](#endpoints)
+  - [Endpoints](#endpoints-1)
+    - [registerController.js](#registercontrollerjs)
+    - [userController.js](#usercontrollerjs)
+  - [Middlewares](#middlewares)
+    - [validationFunctions.js](#validationfunctionsjs)
+    - [authMiddleware.js](#authmiddlewarejs)
+  - [Models](#models)
+    - [User.model.js](#usermodeljs)
+  - [Routes](#routes)
+    - [loginRouter.js](#loginrouterjs)
+    - [registerRouter.js](#registerrouterjs)
+    - [usersRouter.js](#usersrouterjs)
+  - [Services](#services)
+    - [mongo.js](#mongojs)
 
 ## Installation
 
@@ -29,9 +40,13 @@ Bienvenue dans la documentation de l'API. Cette application permet aux utilisate
 
 L'API offre trois routes principales:
 
-1. **/register**: Permet à un utilisateur de créer un compte avec un email, un nom d'utilisateur et un mot de passe.
-2. **/login**: Permet à un utilisateur de se connecter et de récupérer un token d'authentification.
-3. **/users**: Permet à un utilisateur authentifié d'accéder à la liste des utilisateurs enregistrés.
+1. **/register (POST)**: Permet à un utilisateur de créer un compte avec un email, un nom d'utilisateur et un mot de passe.
+   - Paramètres du corps de la requête: email, username, password.
+
+2. **/login (POST)**: Permet à un utilisateur de se connecter.
+   - Paramètres du corps de la requête: email, password.
+
+3. **/users (GET)**: Permet à un utilisateur authentifié d'obtenir la liste des utilisateurs.
 
 ---
 
@@ -71,13 +86,34 @@ StrategIn-Technical-Test Repo -  Xavier Arce
 
 ## Endpoints
 
+...
+
+## Endpoints
+
 1. **/register (POST)**: Permet à un utilisateur de créer un compte.
    - Paramètres du corps de la requête: email, username, password.
+   - Controller: [registerController.registerUser](./src/Controllers/registerController.js)
 
 2. **/login (POST)**: Permet à un utilisateur de se connecter.
    - Paramètres du corps de la requête: email, password.
+   - Controller: [loginController.loginUser](./src/Controllers/loginController.js)
+   - Response:
+     ```json
+     {
+       "status": "success",
+       "accessToken": <ACCESS_TOKEN>
+     }
+     ```
 
 3. **/users (GET)**: Permet à un utilisateur authentifié d'obtenir la liste des utilisateurs.
+   - Controller: [userController.getUsers](./src/Controllers/userController.js)
+   - Authorization: Bearer `<ACCESS_TOKEN>`
+
+Mention: Pour que la route /users fonctionne, vous devez envoyer le jeton JWT dans l'en-tête de la requête. Utilisez le jeton obtenu en réponse à la connexion. Exemple:
+
+```http
+GET http://localhost:3000/users
+Authorization: Bearer <ACCESS_TOKEN>
 
 ---
 

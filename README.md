@@ -15,6 +15,8 @@ Bienvenue dans la documentation de l'API. Cette application permet aux utilisate
   - [Fonctionnalités](#fonctionnalités)
   - [Endpoints](#endpoints)
   - [Endpoints](#endpoints-1)
+  - [Controllers](#controllers)
+    - [loginController.js](#logincontrollerjs)
     - [registerController.js](#registercontrollerjs)
     - [userController.js](#usercontrollerjs)
   - [Middlewares](#middlewares)
@@ -114,7 +116,7 @@ Mention: Pour que la route /users fonctionne, vous devez envoyer le jeton JWT da
 ```http
 GET http://localhost:3000/users
 Authorization: Bearer <ACCESS_TOKEN>
-
+```
 ---
 
 ## Controllers

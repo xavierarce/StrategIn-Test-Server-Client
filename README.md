@@ -1,5 +1,15 @@
 Pour plus de facilité, j'ai joint le fichier .env au dépôt GitHub. Cependant, pour des raisons de sécurité, il ne devrait jamais être exposé.
-# Test technique - API sécurisée par Enregistrement/Connexion
+# Test technique - API sécurisée par Enregistrement/Connexion (API - Client (React))
+Note : La même API a été utilisée, simplement ajoutée côté client et le package npm cors.
+https://github.com/xavierarce/StrategIn-Technical-Test
+
+## Installation
+
+1. Clonez le projet.
+2. Exécutez `npm install` à la racine et également dans le dossier client.
+3. Exécutez `npm watch` pour démarrer le serveur et le client simultanément avec Concurrently et Nodemon npm.
+
+"Consultez request.rest pour des exemples de requêtes (installez l'extension REST Client) ou utilisez Postman."
 
 ## Introduction
 
@@ -11,29 +21,31 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 ### Exemple de requête et d'utilisation dans [Endpoints](#endpoints)
 ## Table des matières
 
-- [Test technique - API sécurisée par Enregistrement/Connexion](#test-technique---api-sécurisée-par-enregistrementconnexion)
-  - [Introduction](#introduction)
-  - [Table des matières](#table-des-matières)
+- [Test technique - API sécurisée par Enregistrement/Connexion (API - Client (React))](#test-technique---api-sécurisée-par-enregistrementconnexion-api---client-react)
   - [Installation](#installation)
+  - [Introduction](#introduction)
+    - [Exemple de requête et d'utilisation dans Endpoints](#exemple-de-requête-et-dutilisation-dans-endpoints)
+  - [Table des matières](#table-des-matières)
   - [Structure du projet](#structure-du-projet)
   - [Utilisation](#utilisation)
   - [Fonctionnalités](#fonctionnalités)
   - [Endpoints](#endpoints)
   - [Contrôleurs](#contrôleurs)
+    - [loginController.js](#logincontrollerjs)
+    - [registerController.js](#registercontrollerjs)
+    - [userController.js](#usercontrollerjs)
   - [Middlewares](#middlewares)
+    - [validationFunctions.js](#validationfunctionsjs)
+    - [authMiddleware.js](#authmiddlewarejs)
   - [Modèles](#modèles)
+    - [User.model.js](#usermodeljs)
   - [Routes](#routes)
+    - [loginRouter.js](#loginrouterjs)
+    - [registerRouter.js](#registerrouterjs)
+    - [usersRouter.js](#usersrouterjs)
   - [Services](#services)
     - [mongo.js](#mongojs)
 
-## Installation
-
-1. Clonez le projet.
-2. Exécutez `npm install`.
-3. Ajoutez le fichier avec les variables d'environnement envoyé par email à la root du repo.
-4. Exécutez `npm start` pour démarrer le serveur avec nodemon.
-
-"Consultez request.rest pour des exemples de requêtes (installez l'extension REST Client) ou utilisez Postman."
 
 ## Structure du projet
 

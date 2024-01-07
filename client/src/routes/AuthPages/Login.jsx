@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./AuthPages.css";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
+import StrategIn from "../../assets/STRATEGINLogo.png";
 
 const EmptyLoginValue = {
   email: "",
@@ -51,6 +52,7 @@ const Login = () => {
   return (
     <div className="AuthPage">
       <div className="AuthPage-Box">
+      <img className="StrategIn-logo" alt="strategIn" src={StrategIn}/>
         <h2 className="AuthPage-text">Connexion</h2>
         <form className="AuthPage-container" onSubmit={handleSubmit}>
           <div className="label-input">

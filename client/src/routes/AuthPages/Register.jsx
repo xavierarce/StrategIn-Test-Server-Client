@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./AuthPages.css";
+import StrategIn from "../../assets/STRATEGINLogo.png";
 
 const EmptyRegisterValue = {
   email: "",
@@ -56,6 +57,7 @@ const Register = () => {
   return (
     <div className="AuthPage">
       <div className="AuthPage-Box">
+      <img className="StrategIn-logo" alt="strategIn" src={StrategIn}/>
         <h2 className="AuthPage-text">Inscription</h2>
         <form className="AuthPage-container" onSubmit={handleSubmit}>
           <div className="label-input">

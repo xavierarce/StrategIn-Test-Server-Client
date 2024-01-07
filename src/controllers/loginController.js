@@ -13,24 +13,22 @@ const loginUser = async (req, res) => {
     const user = await User.findOne({ email }).lean(); // Recherche de l'utilisateur dans la base de données par email
 
     if (!user) {
-      return res.json({ status: "error", error: "Incorrect Credential" }); // Vérification si l'utilisateur existe
+      return res.status(400).json({ status: "error", error: "Incorrect Credential" }); // Vérification si l'utilisateur existe
     }
 
+    userInfo = { username: user.username, email: user.email };
     // Vérification du mot de passe en le comparant avec celui stocké dans la base de données
     if (await bcrypt.compare(password, user.password)) {
       // Génération d'un token d'authentification avec payload et secret, expirant en 1 jour
       const accessToken = jwt.sign(
-        {
-          username: user.username,
-          email: user.email,
-        },
+        userInfo,
         process.env.JWT_SECRET_TOKEN,
         { expiresIn: "1d" } //Modifier au besoin
       );
       // Retourne une réponse réussie avec le token d'authentification
       return res
         .status(200)
-        .json({ status: "success", accessToken: accessToken });
+        .json({ status: "success", userInfo,accessToken: accessToken });
     }
     // En cas de mot de passe incorrect
     return res.json({ status: "error", error: "Incorrect Credential" });

@@ -5,7 +5,7 @@ const { mongoConnect } = require("./services/mongo");
 const app = require("./app");
 
 // Configuration du port du serveur
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 const server = http.createServer(app);
 
 const startServer = async () => {

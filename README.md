@@ -1,5 +1,5 @@
 Pour plus de facilité, j'ai joint le fichier .env au dépôt GitHub. Cependant, pour des raisons de sécurité, il ne devrait jamais être exposé.
-# Test technique - API sécurisée par Enregistrement/Connexion (API - Client (React))
+# Test technique - API sécurisée par Register/Login (API - Client (React))
 Note : La même API a été utilisée, simplement ajoutée côté client et le package npm cors.
 https://github.com/xavierarce/StrategIn-Technical-Test
 
@@ -22,7 +22,7 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 ### Exemple de requête et d'utilisation dans [Endpoints](#endpoints)
 ## Table des matières
 
-- [Test technique - API sécurisée par Enregistrement/Connexion (API - Client (React))](#test-technique---api-sécurisée-par-enregistrementconnexion-api---client-react)
+- [Test technique - API sécurisée par Register/Login (API - Client (React))](#test-technique---api-sécurisée-par-registerlogin-api---client-react)
   - [Installation](#installation)
   - [Introduction](#introduction)
     - [Exemple de requête et d'utilisation dans Endpoints](#exemple-de-requête-et-dutilisation-dans-endpoints)

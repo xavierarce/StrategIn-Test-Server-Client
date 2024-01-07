@@ -1,0 +1,67 @@
+.AuthPage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Adjust as needed */
+}
+
+.AuthPage-Box {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: white;
+  border-radius: 15px;
+  width: 25rem;
+  max-width: 80vw;
+  padding: 2em 0;
+
+}
+
+.AuthPage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.Form-Button {
+  width: fit-content;
+  padding: 1em;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Form-Button-redirect {
+  border-color: transparent;
+  background-color: #016de6;
+  color: white;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  border: 0.1rem solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  outline: none;
+  /* padding: 0.2em; */
+}
+
+.input-box:focus {
+  border-color: rgba(0, 123, 255, 0.5); /* Semi-transparent blue color */
+}
+
+.AuthPage-text {
+  margin: 0;
+}
+.Form-Buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}

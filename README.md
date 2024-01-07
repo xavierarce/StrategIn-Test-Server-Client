@@ -9,8 +9,6 @@ https://github.com/xavierarce/StrategIn-Technical-Test
 2. Exécutez `npm install` à la racine et également dans le dossier client.
 3. Exécutez `npm watch` pour démarrer le serveur et le client simultanément avec Concurrently et Nodemon npm.
 
-"Consultez request.rest pour des exemples de requêtes (installez l'extension REST Client) ou utilisez Postman."
-
 ## Introduction
 
 Bienvenue dans la documentation de l'API ! Cette application se compose de 3 étapes :
@@ -18,6 +16,9 @@ Bienvenue dans la documentation de l'API ! Cette application se compose de 3 ét
 1. Permet à l'utilisateur de créer un compte et de le sauvegarder dans MongoDB.
 2. Permet à l'utilisateur de se connecter et de recevoir un token.
 3. Permet à l'utilisateur de récupérer la liste des utilisateurs dans la base de données une fois connecté avec son token.
+
+"Consultez request.rest pour des exemples de requêtes (installez l'extension REST Client) ou utilisez Postman."
+
 ### Exemple de requête et d'utilisation dans [Endpoints](#endpoints)
 ## Table des matières
 

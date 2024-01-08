@@ -16,7 +16,7 @@ const loginUser = async (req, res) => {
       return res.status(400).json({ status: "error", error: "Incorrect Credential" }); // Vérification si l'utilisateur existe
     }
 
-    userInfo = { username: user.username, email: user.email };
+    const userInfo = { username: user.username, email: user.email };
     // Vérification du mot de passe en le comparant avec celui stocké dans la base de données
     if (await bcrypt.compare(password, user.password)) {
       // Génération d'un token d'authentification avec payload et secret, expirant en 1 jour

@@ -4,7 +4,7 @@ import { UserContext } from "../../context/userContext";
 
 const App = () => {
   const [userList, setUserList] = useState();
-  const {setCurrentUser} = useContext(UserContext);
+  const {currentUser,setCurrentUser} = useContext(UserContext);
 
   const hanldeLogOut = () => {
     setCurrentUser(null);
@@ -36,7 +36,7 @@ const App = () => {
     <div className="App">
       <div className="user-interface">
       <button className="button-logout" onClick={hanldeLogOut}> Logout</button>
-        <h2>Bienvenue!</h2>
+        <h2>Bienvenue {currentUser.username}!</h2>
         <h4>Afficher tous les utilisateurs:</h4>
         <div className="App-buttons">
           <button className="display-button" onClick={handleGetUsers}>

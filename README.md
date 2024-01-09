@@ -7,7 +7,7 @@ https://github.com/xavierarce/StrategIn-Technical-Test
 
 1. Clonez le projet.
 2. Exécutez `npm install` à la racine et également dans le dossier client.
-3. Exécutez `npm watch` pour démarrer le serveur et le client simultanément avec Concurrently et Nodemon npm.
+3. Exécutez `npm run watch` pour démarrer le serveur et le client simultanément avec Concurrently et Nodemon npm.
 
 ## Introduction
 

@@ -1,10 +1,10 @@
-const bcrypt = require("bcrypt");
-const User = require("../models/User.model");
-const {
+import bcrypt from "bcrypt";
+import User from "../models/User.model.js";
+import {
   validateEmail,
   validateUsername,
   validatePassword,
-} = require("../middlewares/validationFunctions");
+} from "../middlewares/validationFunctions.js";
 
 // Contrôleur pour l'inscription d'un nouvel utilisateur
 const registerUser = async (req, res) => {
@@ -30,4 +30,4 @@ const registerUser = async (req, res) => {
   }
 };
 
-module.exports = { registerUser };
+export default registerUser;

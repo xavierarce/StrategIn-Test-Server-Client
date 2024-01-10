@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./AuthPages.css";
 import StrategIn from "../../assets/STRATEGINLogo.png";
 
@@ -12,6 +12,8 @@ const EmptyRegisterValue = {
 const Register = () => {
   const [registerValues, setRegisterValues] = useState(EmptyRegisterValue);
   const { email, password, username } = registerValues;
+
+  const navigate = useNavigate()
 
   const onInputChange = (e) => {
     const { name, value } = e.target;
@@ -36,6 +38,8 @@ const Register = () => {
 
       if (response.ok) {
         alert("Créé! Veuillez vous connecter");
+        navigate('/')
+
       } else {
         throw new Error(data.error || "Registration failed");
         // Display an error message if registration failed

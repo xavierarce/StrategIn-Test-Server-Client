@@ -1,4 +1,4 @@
-const jwt = require("jsonwebtoken");
+import jwt from "jsonwebtoken";
 
 // Middleware pour l'authentification basée sur le token JWT
 const authenticateToken = (req, res, next) => {
@@ -10,7 +10,6 @@ const authenticateToken = (req, res, next) => {
 
   // Vérification du token avec la clé secrète
   jwt.verify(token, process.env.JWT_SECRET_TOKEN, (err, user) => {
-
     // Gestion des erreurs de vérification du token
     if (err) return res.status(403).json({ status: "Forbidden", error: err });
 
@@ -20,4 +19,4 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
-module.exports = authenticateToken;
+export default authenticateToken;

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // Configuration des événements de connexion à MongoDB
 mongoose.connection.once("open", () => console.log("MongoDB connection ready"));
@@ -9,6 +9,4 @@ const mongoConnect = async () => {
   await mongoose.connect(process.env.MONGO_URL);
 };
 
-module.exports = {
-  mongoConnect,
-};
+export default mongoConnect;
